@@ -1,0 +1,10 @@
+.main-content {
+    min-height: 100vh;
+
+    background-image: url('/assets/image/vedik.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+}

@@ -1,0 +1,107 @@
+<div class="container pt-4" style="margin-top:100px; margin-bottom:100px;">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- TITLE -->
+                    <h3 class="text-center text-primary pb-3" *ngIf="!form.data.id">
+                        Add Gym Trainer
+                    </h3>
+
+                    <h3 class="text-center text-primary pb-3" *ngIf="form.data.id > 0">
+                        Update Gym Trainer
+                    </h3>
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div *ngIf="!form.error && form.message" class="alert alert-success">
+                        {{form.message}}
+                    </div>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="form.error && form.message" class="alert alert-danger">
+                        {{form.message}}
+                    </div>
+
+                    <form>
+
+                        <!-- TRAINER NAME -->
+                        <label>
+                            <b>Trainer Name</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="trainerName"
+                                [(ngModel)]="form.data.trainerName"
+                                placeholder="Enter trainer name">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.trainerName}}</span>
+                        </div>
+
+                        <!-- SPECIALIZATION -->
+                        <label class="mt-2">
+                            <b>Specialization</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="specialization"
+                                [(ngModel)]="form.data.specialization"
+                                placeholder="Enter specialization">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.specialization}}</span>
+                        </div>
+
+                        <!-- SALARY -->
+                        <label class="mt-2">
+                            <b>Salary</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" name="salary"
+                                [(ngModel)]="form.data.salary"
+                                placeholder="Enter salary">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">{{form.inputerror.salary}}</span>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="text-center mt-3">
+
+                            <button *ngIf="!form.data.id" type="button"
+                                class="btn btn-success" (click)="submit()">
+                                Save
+                            </button>
+
+                            &nbsp;
+
+                            <button *ngIf="!form.data.id" type="button"
+                                class="btn btn-warning" (click)="reset()">
+                                Reset
+                            </button>
+
+                            <button *ngIf="form.data.id > 0" type="button"
+                                class="btn btn-primary" (click)="submit()">
+                                Update
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+</div>
