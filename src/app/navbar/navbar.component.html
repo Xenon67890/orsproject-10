@@ -8,7 +8,7 @@
 
 <div *ngIf="isLogin()">
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top e">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top e">
 
         <!-- LOGO -->
         <a class="navbar-brand" routerLink="/dashboard">
@@ -21,8 +21,11 @@
             <option value="hi">{{ 'LocaleSelect.Hindi' | translate }}</option>
         </select>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon"></span>
+
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -235,7 +238,7 @@
 
                 </li>
 
-                <!-- PRESCRIPTION -->
+                <!-- PRESCRIPTION
 
                 <li class="nav-item dropdown">
 
@@ -255,9 +258,9 @@
 
                     </div>
 
-                </li>
+                </li> -->
 
-                <!-- GYM TRAINER -->
+                <!-- GYM TRAINER
 
                 <li class="nav-item dropdown">
 
@@ -277,7 +280,29 @@
 
                     </div>
 
-                </li>
+                </li> -->
+
+                <!-- SYSTEM EVENT
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        System Event
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" routerLink="/systemevent">
+                            <i class="fa fa-calendar"></i> Add System Event
+                        </a>
+
+                        <a class="dropdown-item" routerLink="/systemeventlist">
+                            <i class="fa fa-list"></i> System Event List
+                        </a>
+
+                    </div>
+
+                </li> -->
 
                 <!-- Result -->
 

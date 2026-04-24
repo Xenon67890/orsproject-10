@@ -37,7 +37,7 @@ export class EndpointService {
 
  public GYMTRAINER = this.SERVER_URL + "/GymTrainer";
 
-
+ public SYSTEMEVENT = this.SERVER_URL + "/SystemEvent";
 
 
 

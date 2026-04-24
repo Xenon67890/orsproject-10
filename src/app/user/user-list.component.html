@@ -86,7 +86,7 @@
                 <tr *ngFor="let m of form.list; let i = index">
 
                     <td>
-                        <input type="checkbox" #checkboxes (change)="checklistUpdate()" [id]="m.id">
+                        <input type="checkbox" #checkboxes (change)="checklistUpdate()" [id]="m.id" [disabled]="m.roleId==1">
                     </td>
 
                     <td>{{(form.pageNo*5)+i+1}}</td>
@@ -107,11 +107,13 @@
                     <td>{{m.status}}</td>
 
                     <td>
-                        <a (click)="forward('/user/' + m.id)" style="cursor:pointer" class="text-primary">
+                        <!-- <a (click)="forward('/user/' + m.id)"  style="cursor:pointer" class="text-primary">
 
                             Edit
 
-                        </a>
+                        </a> -->
+
+                        <button class =" fa fa-edit"  (click)="forward('/user/' + m.id)" style="cursor: pointer;" ></button>
                     </td>
 
                 </tr>

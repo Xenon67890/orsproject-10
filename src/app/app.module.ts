@@ -62,6 +62,8 @@ import { PrescriptionComponent } from './prescription/prescription.component';
 import { PrescriptionListComponent } from './prescription/prescription-list.component';
 import { GymtrainerComponent } from './gymtrainer/gymtrainer.component';
 import { GymtrainerListComponent } from './gymtrainer/gymtrainer-list.component';
+import { SystemeventComponent } from './systemevent/systemevent.component';
+import { SystemevenListtComponent } from './systemevent/systemeven-listt.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -123,7 +125,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrescriptionComponent,
     PrescriptionListComponent,
     GymtrainerComponent,
-    GymtrainerListComponent
+    GymtrainerListComponent,
+    SystemeventComponent,
+    SystemevenListtComponent
   ],
   imports: [
     BrowserModule,

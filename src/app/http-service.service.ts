@@ -12,8 +12,12 @@ export class HttpServiceService {
   post(endpoint: any, bean: any, callback: any) {
     return this.httpClient.post(endpoint, bean, { withCredentials: true }).subscribe((data) => {
       callback(data);
-    });
-  }
+    },
+      (error) => {
+        callback(error);
+      });
+    }
+  
 
   get(endpoint: any, callback: any) {
     return this.httpClient.get(endpoint, { withCredentials: true }).subscribe((data) => {
@@ -35,7 +39,7 @@ export class HttpServiceService {
   //     console.log("result.msg--------------------------------->",error.error.result.message)
   //     this.router.navigate([this.router.url], {
   //       queryParams: { errorMessage: error.error.result.message }
-        
+
   //     });
   //   }
   // }

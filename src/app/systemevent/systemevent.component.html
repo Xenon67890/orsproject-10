@@ -1,0 +1,128 @@
+<div class="container pt-4" style="margin-top:100px; margin-bottom:100px;">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- TITLE -->
+                    <h3 class="text-center text-primary pb-3" *ngIf="!form.data.id">
+                        Add System Event
+                    </h3>
+
+                    <h3 class="text-center text-primary pb-3" *ngIf="form.data.id > 0">
+                        Update System Event
+                    </h3>
+
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div *ngIf="!form.error && form.message" class="alert alert-success">
+                        {{form.message}}
+                    </div>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="form.error && form.message" class="alert alert-danger">
+                        {{form.message}}
+                    </div>
+
+                    <form>
+
+                        <!-- EVENT CODE -->
+                        <label>
+                            <b>Event Code</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="eventCode" [(ngModel)]="form.data.eventCode"
+                                placeholder="Enter event code">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.eventCode}}
+                            </span>
+                        </div>
+
+
+                        <!-- EVENT NAME -->
+                        <label class="mt-2">
+                            <b>Event Name</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="eventName" [(ngModel)]="form.data.eventName"
+                                placeholder="Enter event name">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.eventName}}
+                            </span>
+                        </div>
+
+
+                        <!-- EVENT TIME -->
+                        <label class="mt-2">
+                            <b>Event Time</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="datetime-local" class="form-control" name="eventTime"
+                                [(ngModel)]="form.data.eventTime">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.eventTime}}
+                            </span>
+                        </div>
+
+
+                        <!-- STATUS -->
+                        <label class="mt-2">
+                            <b>Status</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="status" [(ngModel)]="form.data.status"
+                                placeholder="Enter status">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.status}}
+                            </span>
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="text-center mt-3">
+
+                            <button *ngIf="!form.data.id" type="button" class="btn btn-success" (click)="submit()">
+                                Save
+                            </button>
+
+                            &nbsp;
+
+                            <button *ngIf="!form.data.id" type="button" class="btn btn-warning" (click)="reset()">
+                                Reset
+                            </button>
+
+                            <button *ngIf="form.data.id > 0" type="button" class="btn btn-primary" (click)="submit()">
+                                Update
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+</div>

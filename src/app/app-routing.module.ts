@@ -50,6 +50,8 @@ import { PrescriptionComponent } from './prescription/prescription.component';
 import { PrescriptionListComponent } from './prescription/prescription-list.component';
 import { GymtrainerComponent } from './gymtrainer/gymtrainer.component';
 import { GymtrainerListComponent } from './gymtrainer/gymtrainer-list.component';
+import { SystemeventComponent } from './systemevent/systemevent.component';
+import { SystemevenListtComponent } from './systemevent/systemeven-listt.component';
 
 const routes: Routes = [
   {
@@ -414,20 +416,21 @@ const routes: Routes = [
   },
 
   {
-    path: 'gymtrainer',
-    component: GymtrainerComponent
+    path: 'systemevent',
+    component: SystemeventComponent
   },
 
   {
-    path: 'gymtrainerlist',
-    component: GymtrainerListComponent
+    path: 'systemeventlist',
+    component: SystemevenListtComponent
   },
 
   {
-    path: 'gymtrainer/:id',
-    component: GymtrainerComponent
+    path: 'systemevent/:id',
+    component: SystemeventComponent
   }
 
+  
 
 ];
 
