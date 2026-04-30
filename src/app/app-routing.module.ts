@@ -54,6 +54,10 @@ import { SystemeventComponent } from './systemevent/systemevent.component';
 import { SystemevenListtComponent } from './systemevent/systemeven-listt.component';
 import { VenueComponent } from './venue/venue.component';
 import { VenueListComponent } from './venue/venue-list.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeListComponent } from './employee/employee-list.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationListComponent } from './notification/notification-list.component';
 
 const routes: Routes = [
   {
@@ -445,7 +449,38 @@ const routes: Routes = [
   {
     path: 'venue/:id',
     component: VenueComponent
+  },
+
+  {
+    path: 'employee',
+    component: EmployeeComponent
+  },
+
+  {
+    path: 'employeelist',
+    component: EmployeeListComponent
+  },
+
+  {
+    path: 'employee/:id',
+    component: EmployeeComponent
+  },
+
+  {
+    path: 'notification',
+    component: NotificationComponent
+  },
+
+  {
+    path: 'notificationlist',
+    component: NotificationListComponent
+  },
+
+  {
+    path: 'notification/:id',
+    component: NotificationComponent
   }
+
 
 
   

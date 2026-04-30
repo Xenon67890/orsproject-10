@@ -158,5 +158,35 @@
         "SelectOptions": {
             "SelectRating": "-- Select Rating --"
         }
+    },
+    "NotificationForm": {
+        "AddNotification": "Add Notification",
+        "UpdateNotification": "Update Notification",
+        "Code": "Code",
+        "TotalMessages": "Total Messages",
+        "ProcessesCount": "Processes Count",
+        "FileName": "File Name",
+        "Status": "Status",
+        "Placeholders": {
+            "Code": "Enter Code",
+            "TotalMessages": "Enter Total Messages",
+            "ProcessesCount": "Enter Processes Count",
+            "Status": "Enter Status"
+        },
+        "SelectOptions": {
+            "Select": "------------Select------------"
+        }
+    },
+    "NotificationList": {
+        "Title": "Notification List",
+        "Code": "Code",
+        "FileName": "File Name",
+        "Status": "Status",
+        "TotalMessages": "Total Messages",
+        "ProcessesCount": "Processes Count",
+        "Edit": "Edit",
+        "Table": {
+            "SNo": "S.No"
+        }
     }
 }

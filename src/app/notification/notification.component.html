@@ -1,0 +1,199 @@
+<br>
+<div class="container" style="margin-top:100px; margin-bottom:100px;">
+
+    <div class="row">
+
+        <div class="col-md-4"></div>
+
+        <div class="col-md-6">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <!-- TITLE -->
+                    <h3 class="text-center text-primary" *ngIf="!form.data.id">
+                        {{'NotificationForm.AddNotification' | translate}}
+                    </h3>
+
+                    <h3 class="text-center text-primary" *ngIf="form.data.id>0">
+                        {{'NotificationForm.UpdateNotification' | translate}}
+                    </h3>
+
+                    <!-- MESSAGE -->
+                    <div class="text-center mb-3">
+
+                        <div class="alert alert-success" *ngIf="!form.error && form.message">
+                            {{ form.message }}
+                        </div>
+
+                        <div class="alert alert-danger" *ngIf="form.error && form.message">
+                            {{ form.message }}
+                        </div>
+
+                    </div>
+
+                    <!-- CODE -->
+                    <span>
+                        <b>{{'NotificationForm.Code' | translate}}</b>
+                        <span style="color:red">*</span>
+                    </span>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-code"></i>
+                            </div>
+                        </div>
+
+                        <input type="text" class="form-control" name="code" [(ngModel)]="form.data.code"
+                            placeholder="{{'NotificationForm.Placeholders.Code' | translate}}">
+                    </div>
+
+                    <div style="color:red">{{form.inputerror.code}}</div>
+
+
+                    <!-- TOTAL MESSAGES -->
+                    <span>
+                        <b>{{'NotificationForm.TotalMessages' | translate}}</b>
+                        <span style="color:red">*</span>
+                    </span>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+
+                        <input type="number" class="form-control" name="totalMessages"
+                            [(ngModel)]="form.data.totalMessages"
+                            placeholder="{{'NotificationForm.Placeholders.TotalMessages' | translate}}">
+                    </div>
+
+                    <div style="color:red">{{form.inputerror.totalMessages}}</div>
+
+
+                    <!-- PROCESSES COUNT -->
+                    <span>
+                        <b>{{'NotificationForm.ProcessesCount' | translate}}</b>
+                        <span style="color:red">*</span>
+                    </span>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                        </div>
+
+                        <input type="number" class="form-control" name="processesCount"
+                            [(ngModel)]="form.data.processesCount"
+                            placeholder="{{'NotificationForm.Placeholders.ProcessesCount' | translate}}">
+                    </div>
+
+                    <div style="color:red">{{form.inputerror.processesCount}}</div>
+
+
+                    <!-- FILE NAME -->
+                    <span>
+                        <b>{{'NotificationForm.FileName' | translate}}</b>
+                        <span style="color:red">*</span>
+                    </span>
+
+                    <div class="input-group mb-2">
+
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-file"></i>
+                            </div>
+                        </div>
+
+                        <select class="form-control" name="exportLogId" [(ngModel)]="form.data.exportLogId">
+
+                            <option value="">
+                                {{'NotificationForm.SelectOptions.Select' | translate}}
+                            </option>
+
+                            <option *ngFor="let obj of form.preload.exportList" [value]="obj.key">
+                                {{obj.value}}
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div style="color:red">{{form.inputerror.fileName}}</div>
+
+
+                    <!-- STATUS -->
+                    <span>
+                        <b>{{'NotificationForm.Status' | translate}}</b>
+                        <span style="color:red">*</span>
+                    </span>
+
+                    <div class="input-group mb-2">
+
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                        </div>
+
+                        <input type="text" class="form-control" name="status" [(ngModel)]="form.data.status"
+                            placeholder="{{'NotificationForm.Placeholders.Status' | translate}}">
+                    </div>
+
+                    <div style="color:red">{{form.inputerror.status}}</div>
+
+
+                    <br>
+
+                    <!-- BUTTONS -->
+                    <div class="text-center mt-3">
+
+                        <!-- ADD MODE -->
+                        <button *ngIf="!form.data.id" type="button" class="btn btn-success" (click)="submit()">
+
+                            {{'Buttons.Save' | translate}}
+
+                        </button>
+
+                        &nbsp;
+
+                        <button *ngIf="!form.data.id" type="button" class="btn btn-warning btn-md" (click)="reset()">
+
+                            {{'Buttons.Reset' | translate}}
+
+                        </button>
+
+
+                        <!-- UPDATE MODE -->
+                        <button *ngIf="form.data.id > 0" type="button" class="btn btn-primary" (click)="submit()">
+
+                            {{'Buttons.Update' | translate}}
+
+                        </button>
+
+                        &nbsp;
+
+                        <button *ngIf="form.data.id > 0" type="button" class="btn btn-info"
+                            (click)="forward('/notificationlist')">
+
+                            {{'Buttons.List' | translate}}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4"></div>
+
+    </div>
+
+</div>

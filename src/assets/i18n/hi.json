@@ -135,5 +135,35 @@
         "SelectOptions": {
             "SelectRating": "-- रेटिंग चुनें --"
         }
+    },
+    "NotificationForm": {
+        "AddNotification": "नोटिफिकेशन जोड़ें",
+        "UpdateNotification": "नोटिफिकेशन अपडेट करें",
+        "Code": "कोड",
+        "TotalMessages": "कुल संदेश",
+        "ProcessesCount": "प्रोसेस संख्या",
+        "FileName": "फाइल नाम",
+        "Status": "स्थिति",
+        "Placeholders": {
+            "Code": "कोड दर्ज करें",
+            "TotalMessages": "कुल संदेश दर्ज करें",
+            "ProcessesCount": "प्रोसेस संख्या दर्ज करें",
+            "Status": "स्थिति दर्ज करें"
+        },
+        "SelectOptions": {
+            "Select": "------------चुनें------------"
+        }
+    },
+    "NotificationList": {
+        "Title": "नोटिफिकेशन सूची",
+        "Code": "कोड",
+        "FileName": "फाइल नाम",
+        "Status": "स्थिति",
+        "TotalMessages": "कुल संदेश",
+        "ProcessesCount": "प्रोसेस संख्या",
+        "Edit": "संपादित करें",
+        "Table": {
+            "SNo": "क्रमांक"
+        }
     }
 }

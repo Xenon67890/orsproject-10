@@ -1,0 +1,147 @@
+<div class="container pt-4" style="margin-top:100px; margin-bottom:100px;">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- TITLE -->
+                    <h3 class="text-center text-primary pb-3" *ngIf="!form.data.id">
+                        Add Employee
+                    </h3>
+
+                    <h3 class="text-center text-primary pb-3" *ngIf="form.data.id > 0">
+                        Update Employee
+                    </h3>
+
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div *ngIf="!form.error && form.message" class="alert alert-success">
+                        {{form.message}}
+                    </div>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="form.error && form.message" class="alert alert-danger">
+                        {{form.message}}
+                    </div>
+
+                    <form>
+
+                        <!-- EMPLOYEE CODE -->
+                        <label>
+                            <b>Employee Code</b>
+                            <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="code" [(ngModel)]="form.data.code"
+                                placeholder="Enter employee code">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.code}}
+                            </span>
+                        </div>
+
+
+                        <!-- EMPLOYEE NAME -->
+                        <label class="mt-2">
+                            <b>Employee Name</b>
+                            <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" name="name" [(ngModel)]="form.data.name"
+                                placeholder="Enter employee name">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.name}}
+                            </span>
+                        </div>
+
+
+                        
+
+
+                        <!-- CITY -->
+                        <label class="mt-2">
+                            <b>City</b>
+                            <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+
+                            <select class="form-control" name="collegeId [(ngModel)]="form.data.collegeId>
+
+                                <option value="">
+                                    --Select City--
+                                </option>
+
+                                <option *ngFor="let obj of form.preload.collegeList" [value]="obj.key">
+                                     {{obj.value}}
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.city}}
+                            </span>
+                        </div>
+
+
+                        <!-- JOINING DATE -->
+                        <label class="mt-2">
+                            <b>Date Of Joining</b>
+                            <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-3">
+                            <input type="date" class="form-control" name="joining" [(ngModel)]="form.data.joining"
+                                [ngModel]="form.data.joining | date:'yyyy-MM-dd'">
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.joining}}
+                            </span>
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="text-center mt-3">
+
+                            <button *ngIf="!form.data.id" type="button" class="btn btn-success" (click)="submit()">
+                                Save
+                            </button>
+
+                            &nbsp;
+
+                            <button *ngIf="!form.data.id" type="button" class="btn btn-warning" (click)="reset()">
+                                Reset
+                            </button>
+
+                            <button *ngIf="form.data.id > 0" type="button" class="btn btn-primary" (click)="submit()">
+                                Update
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+
+    </div>
+
+</div>

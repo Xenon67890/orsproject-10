@@ -41,5 +41,9 @@ export class EndpointService {
 
 public VENUE = this.SERVER_URL + "/Venue";
 
+public EMPLOYEE = this.SERVER_URL + "/Employee";
+
+public NOTIFICATION = this.SERVER_URL + "/Notification";
+
 
 }
