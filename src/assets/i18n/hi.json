@@ -63,7 +63,9 @@
         "GetMarksheet": "मार्कशीट प्राप्त करें",
         "Javadoc": "जावाडॉक",
         "AddVenue": "वेन्यू जोड़ें",
-        "VenueList": "वेन्यू सूची"
+        "VenueList": "वेन्यू सूची",
+        "AddBatch": "बैच जोड़ें",
+        "BatchList": "बैच सूची"
     },
     "LocaleSelect": {
         "Select": "-------चुनें-------",
@@ -118,7 +120,8 @@
         "Subject": "विषय",
         "Timetable": "समय सारणी",
         "Faculty": "फैकल्टी",
-        "Venue": "वेन्यू"
+        "Venue": "वेन्यू",
+        "Batch": "बैच"
     },
     "VenueForm": {
         "AddVenue": "वेन्यू जोड़ें",
@@ -162,6 +165,47 @@
         "TotalMessages": "कुल संदेश",
         "ProcessesCount": "प्रोसेस संख्या",
         "Edit": "संपादित करें",
+        "Table": {
+            "SNo": "क्रमांक"
+        }
+    },
+    "BatchForm": {
+        "AddBatch": "बैच जोड़ें",
+        "UpdateBatch": "बैच अपडेट करें",
+        "Code": "कोड",
+        "Name": "नाम",
+        "Records": "रिकॉर्ड्स",
+        "Course": "कोर्स",
+        "Status": "स्थिति",
+        "Placeholders": {
+            "Code": "कोड दर्ज करें",
+            "Name": "नाम दर्ज करें",
+            "Records": "रिकॉर्ड्स दर्ज करें"
+        },
+        "SelectOptions": {
+            "Select": "------------चुनें------------",
+            "Active": "सक्रिय",
+            "Inactive": "निष्क्रिय"
+        }
+    },
+    "BatchList": {
+        "Title": "बैच सूची",
+        "Code": "कोड",
+        "Name": "नाम",
+        "Course": "कोर्स",
+        "Records": "रिकॉर्ड्स",
+        "Status": "स्थिति",
+        "Edit": "संपादित करें",
+        "SearchLabel": {
+            "Code": "कोड",
+            "Name": "नाम",
+            "Status": "स्थिति"
+        },
+        "Placeholders": {
+            "Code": "कोड दर्ज करें",
+            "Name": "नाम दर्ज करें",
+            "Status": "स्थिति दर्ज करें"
+        },
         "Table": {
             "SNo": "क्रमांक"
         }

@@ -58,6 +58,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employee-list.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NotificationListComponent } from './notification/notification-list.component';
+import { BatchComponent } from './batch/batch.component';
+import { BatchListComponent } from './batch/batch-list.component';
 
 const routes: Routes = [
   {
@@ -479,6 +481,21 @@ const routes: Routes = [
   {
     path: 'notification/:id',
     component: NotificationComponent
+  },
+
+  {
+    path: 'batch',
+    component: BatchComponent
+  },
+
+  {
+    path: 'batchlist',
+    component: BatchListComponent
+  },
+
+  {
+    path: 'batch/:id',
+    component: BatchComponent
   }
 
 

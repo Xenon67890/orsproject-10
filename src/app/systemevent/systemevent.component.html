@@ -9,13 +9,12 @@
 
                     <!-- TITLE -->
                     <h3 class="text-center text-primary pb-3" *ngIf="!form.data.id">
-                        Add System Event
+                        Add Batch
                     </h3>
 
                     <h3 class="text-center text-primary pb-3" *ngIf="form.data.id > 0">
-                        Update System Event
+                        Update Batch
                     </h3>
-
 
                     <!-- SUCCESS MESSAGE -->
                     <div *ngIf="!form.error && form.message" class="alert alert-success">
@@ -29,56 +28,76 @@
 
                     <form>
 
-                        <!-- EVENT CODE -->
+                        <!-- CODE -->
                         <label>
-                            <b>Event Code</b> <span style="color:red">*</span>
+                            <b>Code</b> <span style="color:red">*</span>
                         </label>
 
                         <div class="input-group mb-2">
-                            <input type="text" class="form-control" name="eventCode" [(ngModel)]="form.data.eventCode"
-                                placeholder="Enter event code">
+                            <input type="text" class="form-control" name="code" [(ngModel)]="form.data.code"
+                                placeholder="Enter code">
                         </div>
 
                         <div>
                             <span class="text-danger">
-                                {{form.inputerror.eventCode}}
+                                {{form.inputerror.code}}
                             </span>
                         </div>
 
-
-                        <!-- EVENT NAME -->
+                        <!-- NAME -->
                         <label class="mt-2">
-                            <b>Event Name</b> <span style="color:red">*</span>
+                            <b>Name</b> <span style="color:red">*</span>
                         </label>
 
                         <div class="input-group mb-2">
-                            <input type="text" class="form-control" name="eventName" [(ngModel)]="form.data.eventName"
-                                placeholder="Enter event name">
+                            <input type="text" class="form-control" name="name" [(ngModel)]="form.data.name"
+                                placeholder="Enter name">
                         </div>
 
                         <div>
                             <span class="text-danger">
-                                {{form.inputerror.eventName}}
+                                {{form.inputerror.name}}
                             </span>
                         </div>
 
-
-                        <!-- EVENT TIME -->
+                        <!-- RECORDS -->
                         <label class="mt-2">
-                            <b>Event Time</b> <span style="color:red">*</span>
+                            <b>Records</b> <span style="color:red">*</span>
                         </label>
 
                         <div class="input-group mb-2">
-                            <input type="datetime-local" class="form-control" name="eventTime"
-                                [(ngModel)]="form.data.eventTime">
+                            <input type="number" class="form-control" name="records" [(ngModel)]="form.data.records"
+                                placeholder="Enter records">
                         </div>
 
                         <div>
                             <span class="text-danger">
-                                {{form.inputerror.eventTime}}
+                                {{form.inputerror.records}}
                             </span>
                         </div>
 
+                        <!-- COURSE -->
+                        <label class="mt-2">
+                            <b>Course</b> <span style="color:red">*</span>
+                        </label>
+
+                        <div class="input-group mb-2">
+                            <select class="form-control" name="courseId" [(ngModel)]="form.data.courseId">
+
+                                <option value="">------------Select------------</option>
+
+                                <option *ngFor="let obj of form.preload.courseList" [value]="obj.key">
+                                    {{obj.value}}
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <div>
+                            <span class="text-danger">
+                                {{form.inputerror.courseId}}
+                            </span>
+                        </div>
 
                         <!-- STATUS -->
                         <label class="mt-2">
@@ -95,7 +114,6 @@
                                 {{form.inputerror.status}}
                             </span>
                         </div>
-
 
                         <!-- BUTTONS -->
                         <div class="text-center mt-3">

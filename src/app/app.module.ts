@@ -70,6 +70,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employee-list.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NotificationListComponent } from './notification/notification-list.component';
+import { BatchComponent } from './batch/batch.component';
+import { BatchListComponent } from './batch/batch-list.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -139,7 +141,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     EmployeeComponent,
     EmployeeListComponent,
     NotificationComponent,
-    NotificationListComponent
+    NotificationListComponent,
+    BatchComponent,
+    BatchListComponent
   ],
   imports: [
     BrowserModule,

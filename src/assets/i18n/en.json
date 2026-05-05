@@ -62,7 +62,9 @@
         "GetMarksheet": "Get Marksheet",
         "Javadoc": "Javadoc",
         "AddVenue": "Add Venue",
-        "VenueList": "Venue List"
+        "VenueList": "Venue List",
+        "AddBatch": "Add Batch",
+        "BatchList": "Batch List"
     },
     "LocaleSelect": {
         "Select": "-------Select-------",
@@ -141,7 +143,8 @@
         "Subject": "Subject",
         "Timetable": "Timetable",
         "Faculty": "Faculty",
-        "Venue": "Venue"
+        "Venue": "Venue",
+        "Batch": "Batch"
     },
     "VenueForm": {
         "AddVenue": "Add Venue",
@@ -185,6 +188,47 @@
         "TotalMessages": "Total Messages",
         "ProcessesCount": "Processes Count",
         "Edit": "Edit",
+        "Table": {
+            "SNo": "S.No"
+        }
+    },
+    "BatchForm": {
+        "AddBatch": "Add Batch",
+        "UpdateBatch": "Update Batch",
+        "Code": "Code",
+        "Name": "Name",
+        "Records": "Records",
+        "Course": "Course",
+        "Status": "Status",
+        "Placeholders": {
+            "Code": "Enter Code",
+            "Name": "Enter Name",
+            "Records": "Enter Records"
+        },
+        "SelectOptions": {
+            "Select": "------------Select------------",
+            "Active": "Active",
+            "Inactive": "Inactive"
+        }
+    },
+    "BatchList": {
+        "Title": "Batch List",
+        "Code": "Code",
+        "Name": "Name",
+        "Course": "Course",
+        "Records": "Records",
+        "Status": "Status",
+        "Edit": "Edit",
+        "SearchLabel": {
+            "Code": "Code",
+            "Name": "Name",
+            "Status": "Status"
+        },
+        "Placeholders": {
+            "Code": "Enter Code",
+            "Name": "Enter Name",
+            "Status": "Enter Status"
+        },
         "Table": {
             "SNo": "S.No"
         }

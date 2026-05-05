@@ -45,5 +45,6 @@ public EMPLOYEE = this.SERVER_URL + "/Employee";
 
 public NOTIFICATION = this.SERVER_URL + "/Notification";
 
+public BATCH = this.SERVER_URL + "/Batch";
 
 }
